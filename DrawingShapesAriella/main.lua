@@ -11,7 +11,11 @@ display.setStatusBar(display.HiddenStatusBar)
 local verticesStar ={0, -79, 19, -30, 99, -20, 21, 20, 40, 100, -17, 40, -59, 80, -38, 20, -82, 40, -20, -31}
 
 -- display the shape unto the screen with the content width and height
-local Star =display.newPolygon(display.contentWidth/2, display.contentHeight/4 , verticesStar)
+local Star =display.newPolygon(display.contentWidth/2, display.contentHeight/2 , verticesStar)
+
+-- set background
+--display
+
 
 -- anchor the star in the bottom left corner of the screen and set it's (x,y) position
 Star.anchorX = 768
@@ -27,7 +31,7 @@ textObjectStar = display.newText("Star", 800, 750, nil, 50)
 -- set the star width border 
 Star.strokeWidth = 1
 
-local paint = {
+paint = {
 	type = "gradient",
 	color1 = {29/255, 34/255, 191/255}, color2 = {208/255, 74/255, 192/255},
 	directions = "up",
