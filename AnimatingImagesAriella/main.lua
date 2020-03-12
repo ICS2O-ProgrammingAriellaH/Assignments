@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 -- Title: Animating Images 
 -- Name: Ariella Harlequin
 -- Course: ICS2O
@@ -92,3 +93,15 @@ end
 
 -- MoveZuko will be called over and over again
 Runtime:addEventListener("enterFrame", MoveZuko)
+=======
+-- Title: HelloWorld
+-- Name: Your Name
+-- Course: ICS2O/3C
+-- This program displays Hello to the simulator and to the command terminal.
+
+
+
+
+
+
+>>>>>>> 74dcb9d6e238a73798d1c76e0bb9111d75b4bbe3
