@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 -- Title: Animating Images 
 -- Name: Ariella Harlequin
 -- Course: ICS2O
@@ -8,9 +7,9 @@
 -- VARIABLES
 -------------------------------------------------------------------------------------
 local programText
-
+-----------------------------------------------------------------------------------------------
 -- set the background 
-local backgroundImage = display.newImageRect("Images/background.png",2048, 1536)
+local backgroundImage = display.newImageRect("Images/background.jpg",2048, 1536)
 
 -- global variables
 scrollSpeed = 4
@@ -19,7 +18,7 @@ scrollSpeed = 4
 display.setStatusBar(display.HiddenStatusBar)
 -----------------------------------------------------------------------------------------
 -- create first image and, set its position and make it visible
-local Azula = display.newImageRect("Images/Azula.png",198, 96)
+local Azula = display.newImageRect("Images/Azula.png.png",198, 100)
 
 -- set the image to be transparent
 Azula.alpha = 0
@@ -29,7 +28,7 @@ Azula.x = 0
 Azula.y = display.contentHeight/3
 
 -- create second image, set its position and make it visible
-local Sokka = display.newImageRect("Images/Sokka.png",198, 96)
+local Sokka = display.newImageRect("Images/Sokka.png.png",198, 100)
 
 Sokka.x = 0
 Sokka.y = display.contentHeight/3
@@ -38,7 +37,7 @@ Sokka.y = display.contentHeight/3
 Sokka.alpha = 0
 
 -- create the third image, set its position and make it visible
-local Zuko = display.newImageRect("Images/Zuko.png",198, 96)
+local Zuko = display.newImageRect("Images/Zuko.png.png",198, 100)
 
 Zuko.x = 0
 Zuko.y = display.contentHeight/3
@@ -47,7 +46,7 @@ Zuko.y = display.contentHeight/3
 Zuko.alpha = 0
 
 -- write the title of the program on the screen
-local programText = display.newText("Avatar: The Final Battle", 0, 0, Arial, textsize)
+local programText = display.newText("Avatar: The Final Battle", 0, 0, Arial, 57)
 ----------------------------------------------------------------------------------------------
 -- FUNCTIONS
 -----------------------------------------------------------------------------------------------
@@ -93,15 +92,3 @@ end
 
 -- MoveZuko will be called over and over again
 Runtime:addEventListener("enterFrame", MoveZuko)
-=======
--- Title: HelloWorld
--- Name: Your Name
--- Course: ICS2O/3C
--- This program displays Hello to the simulator and to the command terminal.
-
-
-
-
-
-
->>>>>>> 74dcb9d6e238a73798d1c76e0bb9111d75b4bbe3

@@ -63,7 +63,7 @@ local paint = {
 	directions = "up",
 }
 Pentagon.fill = paint
-=======
+-- =======
 -- display a triangle on the screen
 display.newPolygon(768, 192, 0, -60, 60, 80, -80, 60)
 local verticesTri ={0, -60, 60, 80, -80, 60}
