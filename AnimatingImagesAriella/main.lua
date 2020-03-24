@@ -9,17 +9,16 @@
 local programText
 -----------------------------------------------------------------------------------------------
 -- set the background 
-local backgroundImage = display.newImageRect("Images/background.jpg",2048, 1536)
+local backgroundImage = display.newImageRect("Images/background.png.jpg",2048, 1536)
 
 -- global variables
-scrollSpeed = 4
+scrollSpeed = 3
 
 -- hide the status bar
 display.setStatusBar(display.HiddenStatusBar)
 -----------------------------------------------------------------------------------------
 -- create first image and, set its position and make it visible
-local Azula = display.newImageRect("Images/Azula.png.png",198, 100)
-
+local Azula = display.newImageRect("Images/Azula.png.png",100, 235)
 -- set the image to be transparent
 Azula.alpha = 0
 
@@ -27,26 +26,30 @@ Azula.alpha = 0
 Azula.x = 0
 Azula.y = display.contentHeight/3
 
--- create second image, set its position and make it visible
-local Sokka = display.newImageRect("Images/Sokka.png.png",198, 100)
+-- set the image to be transparent
+Azula.alpha = 1
 
-Sokka.x = 0
+-- create second image, set its position and make it visible
+local Sokka = display.newImageRect("Images/Sokka.png.png",198, 235)
+
+Sokka.x = display.contentWidth
 Sokka.y = display.contentHeight/3
 
 -- set the image to be transparent
-Sokka.alpha = 0
+Sokka.alpha = 1
 
 -- create the third image, set its position and make it visible
-local Zuko = display.newImageRect("Images/Zuko.png.png",198, 100)
+local Zuko = display.newImageRect("Images/Zuko.png.png",198, 235)
 
-Zuko.x = 0
-Zuko.y = display.contentHeight/3
+Zuko.x = display.contentWidth
+Zuko.y = display.contentHeight
 
 ---- set the transparency
-Zuko.alpha = 0
+Zuko.alpha = 1
 
 -- write the title of the program on the screen
-local programText = display.newText("Avatar: The Final Battle", 0, 0, Arial, 57)
+local programText = display.newText("Avatar: The Final Battle", 545, 400, arial, 80 )
+programText:setFillColor(27/255, 0/255, 102/255)
 ----------------------------------------------------------------------------------------------
 -- FUNCTIONS
 -----------------------------------------------------------------------------------------------
@@ -62,7 +65,7 @@ local function MoveAzula(event)
 	Azula.alpha = Azula.alpha + 0.01
 end
 
--- MoveSokka will be called over and over again
+-- MoveAzula will be called over and over again
 Runtime:addEventListener("enterFrame", MoveAzula)
 ------------------------------------------------------------------------------------------------
 -- Function: MoveSokka
@@ -72,6 +75,7 @@ Runtime:addEventListener("enterFrame", MoveAzula)
 local function MoveSokka(event)
 	-- add the scroll speed to the value of the ship
 	Sokka.x = Sokka.x - scrollSpeed
+
 	-- change the transparency of Sokka every time it move so that it fades out 
 	Sokka.alpha = Sokka.alpha + 0.01
 end
@@ -85,9 +89,10 @@ Runtime:addEventListener("enterFrame", MoveSokka)
 -- Description: This function adds the scroll speed to the x-value of the ship
 local function MoveZuko(event)
 	-- add the scroll speed to the value of the ship
-	Zuko.x = Zuko.x + scrollSpeed
+	Zuko.x = Zuko.x - scrollSpeed
+	Zuko.y = Zuko.y - scrollSpeed
 	-- change the transparency of Zuko every time it move so that it fades out 
-	Zuko.alpha = Zuko.alpha - 0.01
+	Zuko.alpha = Zuko.alpha - 0.001
 end
 
 -- MoveZuko will be called over and over again
